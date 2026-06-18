@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   position: fixed;
   top: 0;
@@ -20,12 +21,33 @@
 .left-section {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+}
+
+.menu-button,
+.icon-button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button {
+  height: 40px;
+  width: 48px;
+  margin-left: 12px;
 }
 
 .hamburger-menu {
   height: 24px;
-  margin-left: 24px;
-  margin-right: 24px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
 }
 
 .youtube-logo {
@@ -39,6 +61,7 @@
   max-width: 500px;
   display: flex;
   align-items: center;
+  min-width: 120px;
 }
 
 .search-bar {
@@ -162,3 +185,55 @@
   border-radius: 16px;
 }
 
+body.is-tablet .middle-section {
+  margin-left: 28px;
+  margin-right: 18px;
+}
+
+body.is-tablet .right-section {
+  width: 136px;
+  margin-right: 12px;
+}
+
+body.is-tablet .apps-button {
+  display: none;
+}
+
+body.is-compact .header {
+  height: 112px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 0 12px 10px;
+}
+
+body.is-compact .left-section {
+  flex: 1;
+  height: 55px;
+}
+
+body.is-compact .menu-button {
+  margin-left: -8px;
+}
+
+body.is-compact .middle-section {
+  order: 3;
+  flex-basis: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+body.is-compact .right-section {
+  width: auto;
+  gap: 12px;
+  margin-right: 0;
+}
+
+body.is-compact .upload-icon-container,
+body.is-compact .voice-search-button {
+  display: none;
+}
+
+body.is-compact .search-button {
+  width: 52px;
+  margin-right: 0;
+}

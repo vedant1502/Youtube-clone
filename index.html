@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouTube Clone</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,406 +15,79 @@
   <link rel="stylesheet" href="styles/video.css">
   <link rel="stylesheet" href="styles/sidebar.css">
 
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="icons/youtube-logo-title.png.png" type="image/png">
+  <script src="scripts/app.js" defer></script>
 </head>
 
 <body>
   <header class="header">
     <div class="left-section">
-      <img class="hamburger-menu" src="icons/hamburger-menu.svg">
-      <img class="youtube-logo" src="icons/youtube-logo.svg">
+      <button class="menu-button" type="button" aria-label="Toggle navigation">
+        <img class="hamburger-menu" src="icons/hamburger-menu.svg" alt="">
+      </button>
+      <a class="logo-link" href="/" aria-label="YouTube Clone home">
+        <img class="youtube-logo" src="icons/youtube-logo.svg" alt="YouTube">
+      </a>
     </div>
-    <div class="middle-section">
-      <input class="search-bar" type="text" placeholder="Search">
-      <button class="search-button">
-        <img class="search-icon" src="icons/search.svg">
+
+    <form class="middle-section search-form" role="search">
+      <input class="search-bar" type="search" placeholder="Search" aria-label="Search videos">
+      <button class="search-button" type="submit">
+        <img class="search-icon" src="icons/search.svg" alt="">
         <div class="tooltip">Search</div>
       </button>
-      <button class="voice-search-button">
-        <img class="voice-search-icon" src="icons/voice-search-icon.svg">
+      <button class="voice-search-button" type="button" aria-label="Search with your voice">
+        <img class="voice-search-icon" src="icons/voice-search-icon.svg" alt="">
         <div class="tooltip">Search with your voice</div>
       </button>
-    </div>
+    </form>
+
     <div class="right-section">
-      <div class="upload-icon-container">
-        <img class="upload-icon" src="icons/upload.svg">
+      <button class="upload-icon-container icon-button" type="button" aria-label="Create">
+        <img class="upload-icon" src="icons/upload.svg" alt="">
         <div class="tooltip">Create</div>
-      </div>
-      <img class="youtube-apps-icon" src="icons/youtube-apps.svg">
-      <div class="notifications-icon-container">
-        <img class="notifications-icon" src="icons/notifications.svg">
+      </button>
+      <button class="icon-button apps-button" type="button" aria-label="YouTube apps">
+        <img class="youtube-apps-icon" src="icons/youtube-apps.svg" alt="">
+      </button>
+      <button class="notifications-icon-container icon-button" type="button" aria-label="Notifications">
+        <img class="notifications-icon" src="icons/notifications.svg" alt="">
         <div class="notifications-count">3</div>
-      </div>
-      <img class="current-user-picture" src="my profile/my-channel-1.jpeg">
+      </button>
+      <img class="current-user-picture" src="my profile/my-channel-1.jpeg" alt="Current user">
     </div>
   </header>
 
-  <nav class="sidebar">
-    <div class="sidebar-link">
-      <img src="side bar/home.svg">
+  <nav class="sidebar" aria-label="Primary navigation">
+    <a class="sidebar-link" href="/">
+      <img src="side bar/home.svg" alt="">
       <div>Home</div>
-    </div>
-    <div class="sidebar-link">
-      <img src="side bar/explore.svg">
+    </a>
+    <a class="sidebar-link" href="/">
+      <img src="side bar/explore.svg" alt="">
       <div>Explore</div>
-    </div>
-    <div class="sidebar-link">
-      <img src="side bar/subscriptions.svg">
+    </a>
+    <a class="sidebar-link" href="/">
+      <img src="side bar/subscriptions.svg" alt="">
       <div>Subscriptions</div>
-    </div>
-    <div class="sidebar-link">
-      <img src="side bar/originals.svg">
+    </a>
+    <a class="sidebar-link" href="/">
+      <img src="side bar/originals.svg" alt="">
       <div>Originals</div>
-    </div>
-    <div class="sidebar-link">
-      <img src="side bar/youtube-music.svg">
+    </a>
+    <a class="sidebar-link" href="/">
+      <img src="side bar/youtube-music.svg" alt="">
       <div>YouTube Music</div>
-    </div>
-    <div class="sidebar-link">
-      <img src="side bar/library.svg">
+    </a>
+    <a class="sidebar-link" href="/">
+      <img src="side bar/library.svg" alt="">
       <div>Library</div>
-    </div>
+    </a>
   </nav>
 
   <main>
-    <section class="video-grid">
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://youtu.be/Yk5MEXiJBZg?si=0e1irts2_LGy10nK">
-          <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
-          </a>
-          <div class="video-time">1:05:18</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              Matheran Horror Story | Marathi Stories | Bhankas Podcast
-            </p>
-            <p class="video-author">
-              <a href="https://www.youtube.com/@BhankasPodcast" class="text-link">
-              Bhankas Podcast 
-              </a>
-            </p>
-            <p class="video-stats">
-              110K views•4 months ago
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://youtu.be/ZRLCwXX3hCk?si=k6NoU7Yuqu7YZMYy">
-          <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
-          </a>
-          <div class="video-time">34:10</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-2.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              FRIENDSHIPS TODNE WALI GAME! [Chained Together]
-            </p>
-            <p class="video-author">
-              <a href="https://www.youtube.com/@BeastBoyShub" class="text-link">
-              BeastBoyShub
-              </a>
-            </p>
-            <p class="video-stats">
-              1.5M views
-              1 year ago
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://youtu.be/f9Upnc1EG7c?si=wuutd6u-dQzjonSu">
-          <img class="thumbnail" src="thumbnails/thumbnail-3.webp">
-          </a>
-          <div class="video-time">9:27</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-3.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              Divorce pe aate hai
-            </p>
-            <p class="video-author">
-              <a href="https://www.youtube.com/@arpitbaala" class="text-link">
-              Arpit Bala
-              </a>
-            </p>
-            <p class="video-stats">
-              1.8M views
-              •
-              2 years ago
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://youtu.be/dB6sowSVcZw?si=mN7h3unxq-Qzc59t">
-          <img class="thumbnail" src="thumbnails/thumbnail-4.webp">
-          </a>
-          <div class="video-time">36:37</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-4.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              Ekaki Chapter 1 : Presence | Ashish Chanchlani | ACV Studios
-            </p>
-            <p class="video-author">
-              <a href="https://www.youtube.com/@ashishchanchlanivines" class="text-link">
-              ashish chanchlani vines
-                </a>
-            </p>
-            <p class="video-stats">
-              22M views
-              •
-              11 days ago
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://youtu.be/7SE9ODzz8zU?si=9Z1-JPjDvy1WW9FP">
-          <img class="thumbnail" src="thumbnails/thumbnail-5.webp">
-          </a>
-          <div class="video-time">02:57</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-5.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              Goku New Form vs Broly「LEGEND - A DRAGON BALL TALE AMV 」Courtesy Call ᴴᴰ
-            </p>
-            <p class="video-author">
-              <a href="https://www.youtube.com/@KINGAMVsOFFICIAL" class="text-link">
-              KING AMV's 夢
-              </a>
-            </p>
-            <p class="video-stats">
-              11M views 2 years ago
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://youtu.be/ADs8tvU2xDc?si=PFbCc95WtN-v2-h2">
-          <img class="thumbnail" src="thumbnails/thumbnail-6.webp">
-          </a>
-          <div class="video-time">05:41</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-6.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              F1 Car vs MotoGP Bike vs Rally Car: Ultimate Drag Race!
-            </p>
-            <p class="video-author">
-              <a href="https://www.youtube.com/@redbull" class="text-link">
-              Red Bull
-              </a>
-            </p>
-            <p class="video-stats">
-              23M views
-              •
-              2 years ago
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://youtu.be/KfDnMpuSYic?si=q_7otDLapgrIiAVF">
-          <img class="thumbnail" src="thumbnails/thumbnail-7.webp">
-          </a>
-          <div class="video-time">8:31</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-7.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              Want BIGGER forearms? DO THESE (5 Best Forearms Exercises)
-            </p>
-            <p class="video-author">
-              <a href="https://www.youtube.com/@captainworkoutYT" class="text-link">
-              Captain Workout
-                </a>
-            </p>
-            <p class="video-stats">
-              1.7M views 1 month ago
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://youtu.be/ik_6Ou8Gx8E?si=bVJ2j-e9b1YXTyzF">
-          <img class="thumbnail" src="thumbnails/thumbnail-8.webp">
-          </a>
-          <div class="video-time">8:33</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-8.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              Indian Exams ft.Schools
-            </p>
-            <p class="video-author">
-              <a href="https://www.youtube.com/@Hardtoonz22" class="text-link">
-              HardToonz
-              </a>
-            </p>
-            <p class="video-stats">
-              10M views
-              •
-              2 years ago
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://youtu.be/TBxS0XhdfmU?si=3VC8EwuCdGBP9Ce7">
-          <img class="thumbnail" src="thumbnails/thumbnail-9.webp">
-          </a>
-          <div class="video-time">3:25</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-9.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              If you're ambitious but lazy, please watch this video...
-            </p>
-            <p class="video-author">
-              <a href="https://www.youtube.com/@RiseWithOdn" class="text-link">
-              Rise With Odn
-              </a>
-            </p>
-            <p class="video-stats">
-              5.8M views 10 months ago
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://youtu.be/tplJ3GvhNAI?si=HtPqYfc08Tyw-tCX">
-          <img class="thumbnail" src="thumbnails/thumbnail-10.webp">
-          </a>
-          <div class="video-time">6:50</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-10.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              World's Most Powerful Laptop !
-            </p>
-            <p class="video-author">
-              <a href="https://www.youtube.com/@TechBurner" class="text-link">
-              Tech Burner
-              </a>
-            </p>
-            <p class="video-stats">
-              7.2M views
-              •
-              3 years ago
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://youtu.be/Edn-n_XXCbA?si=wVjQUIqxCaJ3JPCQ">
-          <img class="thumbnail" src="thumbnails/thumbnail-11.webp">
-          </a>
-          <div class="video-time">6:25</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-11.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              Meri GF ke kitne BF hai? | QnA
-            </p>
-            <p class="video-author">
-              <a href="https://www.youtube.com/@AngryPrashReal" class="text-link">
-              Angry Prash
-              </a>
-            </p>
-            <p class="video-stats">
-              4.1M views 1 year ago
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-preview">
-        <div class="thumbnail-row">
-          <a href="https://youtu.be/4TYv2PhG89A?si=lG4mBxOJZ-2-nEgQ">
-            <img class="thumbnail" src="thumbnails/thumbnail-12.webp">
-          </a>
-          <div class="video-time">4:18</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="channel-pictures/channel-12.jpeg">
-          </div>
-          <div class="video-info">
-            <p class="video-title">
-              Sade - Smooth Operator - Official - 1984
-            </p>
-            <p class="video-author">
-              <a href="https://www.youtube.com/@SadeSME" class="text-link">
-              Sade
-              </a>
-            </p>
-            <p class="video-stats">
-              209M views
-              15 years ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <p class="video-status" aria-live="polite">Loading videos...</p>
+    <section class="video-grid" aria-label="Video recommendations"></section>
   </main>
 </body>
 

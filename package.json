@@ -1,0 +1,16 @@
+{
+  "name": "youtube-clone",
+  "version": "1.0.0",
+  "description": "A responsive YouTube clone with a small JavaScript backend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "youtube",
+    "clone",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC"
+}
